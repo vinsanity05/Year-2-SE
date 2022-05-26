@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="292.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="UpdateAccountWindowController">
+  <tabs>
+    <Tab text="Update Account">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="addressTextField" layoutX="129.0" layoutY="14.0" />
+                  <PasswordField fx:id="passwordTextField" layoutX="129.0" layoutY="48.0" />
+                  <Button fx:id="updateAccountButton" layoutX="14.0" layoutY="89.0" mnemonicParsing="false" onAction="#onUpdateAccountButton" prefHeight="25.0" prefWidth="224.0" text="Update Account" />
+                  <Label layoutX="14.0" layoutY="18.0" prefHeight="17.0" prefWidth="105.0" text="Address" />
+                  <Label layoutX="14.0" layoutY="52.0" prefHeight="17.0" prefWidth="105.0" text="Password" />
+                  <Button fx:id="helpButton" layoutX="252.0" layoutY="89.0" mnemonicParsing="false" onAction="#onHelpButton" prefHeight="25.0" prefWidth="26.0" text="?" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

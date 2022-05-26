@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<TabPane fx:id="mainTabPane" maxHeight="400.0" maxWidth="292.0" minHeight="400.0" minWidth="292.0" prefHeight="400.0" prefWidth="292.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RegistrationWindowController">
+   <tabs>
+      <Tab fx:id="loginTab" text="Register">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="109.0" layoutY="14.0" text="Email Address" />
+                  <TextField fx:id="emailTextField" layoutX="14.0" layoutY="34.0" onKeyReleased="#onEmailKeyPressed" prefHeight="26.0" prefWidth="265.0" />
+                  <PasswordField fx:id="passwordTextField" layoutX="13.0" layoutY="119.0" onKeyPressed="#onPasswordKeyPressed" prefHeight="25.0" prefWidth="265.0" />
+                  <Label layoutX="106.0" layoutY="60.0" text="Phone Number" />
+                  <TextField fx:id="phoneNumberTextField" layoutX="13.0" layoutY="77.0" onKeyPressed="#onPhoneNumberKeyPressed" prefHeight="25.0" prefWidth="265.0" />
+                  <Label layoutX="124.0" layoutY="144.0" text="Address" />
+                  <TextField fx:id="addressTextField" layoutX="13.0" layoutY="161.0" onKeyPressed="#onAddressKeyPressed" prefHeight="25.0" prefWidth="265.0" />
+                  <Label layoutX="122.0" layoutY="102.0" text="Password" />
+                  <Button fx:id="registerButton" disable="true" layoutX="10.0" layoutY="232.0" mnemonicParsing="false" onAction="#onRegisterButtonAction" prefHeight="32.0" prefWidth="272.0" text="Register" />
+                  <Pane layoutX="8.0" layoutY="270.0" prefHeight="94.0" prefWidth="275.0" style="-fx-border-color: lightgrey; -fx-background-color: f1f1f1;">
+                     <children>
+                        <Label layoutX="111.0" layoutY="6.0" text="Contact NHS" />
+                        <Label layoutX="12.0" layoutY="26.0" text="For urgent medical help:" />
+                        <Hyperlink fx:id="registerHyperlink" layoutX="145.0" layoutY="23.0" onAction="#onRegisterLinkPress" text="https://111.nhs.uk/" />
+                        <Label layoutX="12.0" layoutY="46.0" text="or call 111. For life-threatening emergencies," />
+                        <Label layoutX="12.0" layoutY="66.0" text="call 999 for an ambulance." />
+                     </children>
+                  </Pane>
+                  <Label layoutX="119.0" layoutY="186.0" text="Full Name" />
+                  <TextField fx:id="nameTextField" layoutX="13.0" layoutY="203.0" onKeyPressed="#onNameKeyPressed" prefHeight="25.0" prefWidth="265.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>

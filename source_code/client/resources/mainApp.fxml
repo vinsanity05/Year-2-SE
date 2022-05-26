@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<TabPane fx:id="mainTabPane" maxHeight="400.0" maxWidth="292.0" minHeight="400.0" minWidth="292.0" prefHeight="400.0" prefWidth="292.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+    <tabs>
+        <Tab fx:id="loginTab" text="Login">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="109.0" layoutY="14.0" text="Email Address" />
+                        <TextField fx:id="emailTextField" layoutX="14.0" layoutY="34.0" onKeyReleased="#onEmailKeyPressed" prefHeight="26.0" prefWidth="265.0" />
+                        <Label layoutX="122.0" layoutY="79.0" text="Password" />
+                        <Button fx:id="loginButton" disable="true" layoutX="14.0" layoutY="132.0" mnemonicParsing="false" onAction="#onLoginButtonAction" prefHeight="32.0" prefWidth="122.0" text="Login" />
+                        <Button fx:id="registerButton" disable="true" layoutX="156.0" layoutY="132.0" mnemonicParsing="false" onAction="#onRegisterButtonAction" prefHeight="32.0" prefWidth="122.0" text="Register" />
+                        <Pane layoutX="8.0" layoutY="270.0" prefHeight="94.0" prefWidth="275.0" style="-fx-border-color: lightgrey; -fx-background-color: f1f1f1;">
+                            <children>
+                                <Label layoutX="111.0" layoutY="6.0" text="Contact NHS" />
+                                <Label layoutX="12.0" layoutY="26.0" text="For urgent medical help:" />
+                                <Hyperlink fx:id="loginHyperlink" layoutX="145.0" layoutY="23.0" onAction="#onLoginLinkPress" text="https://111.nhs.uk/" />
+                                <Label layoutX="12.0" layoutY="46.0" text="or call 111. For life-threatening emergencies," />
+                                <Label layoutX="12.0" layoutY="66.0" text="call 999 for an ambulance." />
+                            </children>
+                        </Pane>
+                  <PasswordField fx:id="passwordTextField" layoutX="14.0" layoutY="97.0" onKeyPressed="#onPasswordKeyPressed" prefHeight="25.0" prefWidth="265.0" />
+                    </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="homeTab" disable="true" text="Home">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="nhsCovidInfoButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onNhsCovidInfoButton" prefHeight="32.0" prefWidth="271.0" text="NHS Covid Information" />
+                        <Button fx:id="commonCovidSympButton" layoutX="14.0" layoutY="60.0" mnemonicParsing="false" onAction="#onCommonCovidSymptomsButton" prefHeight="32.0" prefWidth="270.0" text="Common Covid Symptoms" />
+                        <Button fx:id="testKitInfoButton" layoutX="15.0" layoutY="105.0" mnemonicParsing="false" onAction="#onTestKitInformationButton" prefHeight="32.0" prefWidth="269.0" text="Test Kit Information" />
+                        <Button fx:id="settingsButton" disable="true" layoutX="251.0" layoutY="195.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" />
+                  <Pane layoutX="8.0" layoutY="270.0" prefHeight="94.0" prefWidth="275.0" style="-fx-border-color: lightgrey; -fx-background-color: f2f2f2;">
+                     <children>
+                        <Label layoutX="111.0" layoutY="6.0" text="Contact NHS" />
+                        <Label layoutX="12.0" layoutY="26.0" text="For urgent medical help:" />
+                        <Hyperlink fx:id="loginHyperlink1" layoutX="145.0" layoutY="23.0" onAction="#onHomeLinkPress" text="https://111.nhs.uk/" />
+                        <Label layoutX="12.0" layoutY="46.0" text="or call 111. For life-threatening emergencies," />
+                        <Label layoutX="12.0" layoutY="66.0" text="call 999 for an ambulance." />
+                     </children>
+                  </Pane>
+                  <Button fx:id="contactSharingButton" layoutX="15.0" layoutY="147.0" mnemonicParsing="false" onAction="#onShareContactDetailsButton" prefHeight="32.0" prefWidth="270.0" text="Share Contact Details" />
+                  <Button fx:id="updateAccountButton" layoutX="14.0" layoutY="194.0" mnemonicParsing="false" onAction="#onUpdateAccountButton" prefHeight="34.0" prefWidth="231.0" text="Update Account Information" />
+                    </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="adminTab" disable="true" text="Admin">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="getEmailsButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onEmailButtonAction" prefHeight="32.0" prefWidth="122.0" text="Get Email" />
+                        <Button fx:id="getSmsButton" layoutX="156.0" layoutY="14.0" mnemonicParsing="false" onAction="#onSmsButtonAction" prefHeight="32.0" prefWidth="122.0" text="Get SMS" />
+                        <Pane layoutX="8.0" layoutY="270.0" prefHeight="94.0" prefWidth="275.0" style="-fx-border-color: lightgrey; -fx-background-color: f1f1f1;">
+                            <children>
+                                <Label layoutX="111.0" layoutY="6.0" text="Contact NHS" />
+                                <Label layoutX="12.0" layoutY="26.0" text="For urgent medical help:" />
+                                <Hyperlink fx:id="adminHyperlink" layoutX="145.0" layoutY="23.0" onAction="#onLoginLinkPress" text="https://111.nhs.uk/" />
+                                <Label layoutX="12.0" layoutY="46.0" text="or call 111. For life-threatening emergencies," />
+                                <Label layoutX="12.0" layoutY="66.0" text="call 999 for an ambulance." />
+                            </children>
+                        </Pane>
+                  <TextField fx:id="messageIdTextField" layoutX="14.0" layoutY="73.0" prefHeight="25.0" prefWidth="264.0" />
+                  <Label layoutX="115.0" layoutY="56.0" text="Message ID" />
+                  <TextField fx:id="accountTextField" layoutX="14.0" layoutY="151.0" prefHeight="25.0" prefWidth="140.0" />
+                  <Button fx:id="deleteAccountButton" layoutX="159.0" layoutY="151.0" mnemonicParsing="false" onAction="#onDeleteAccountButton" prefHeight="25.0" prefWidth="118.0" text="Delete Account" />
+                  <PasswordField fx:id="adminUpdatePasswordField" layoutX="14.0" layoutY="215.0" prefHeight="25.0" prefWidth="141.0" />
+                  <Button fx:id="adminUpdatePasswordButton" layoutX="159.0" layoutY="215.0" mnemonicParsing="false" onAction="#onAdminUpdatePasswordButton" prefHeight="25.0" prefWidth="117.0" text="Update Password" />
+                    </children></AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>
